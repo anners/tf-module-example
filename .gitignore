@@ -2,6 +2,5 @@
 backend.tf
 .terraform/*
 .terraform
-vars.tf
 terraform.*
 .git
