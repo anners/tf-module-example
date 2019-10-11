@@ -2,6 +2,7 @@ resource "random_pet" "petservername" {
 }
 
 resource "google_compute_instance" "gce" {
+  # create a fun name for your pet server
   name         = "${random_pet.petservername.id}"
   machine_type = "n1-standard-1"
   zone         = var.zone

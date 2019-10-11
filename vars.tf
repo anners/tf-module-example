@@ -20,6 +20,11 @@ variable "billing_account" {
   default     = ""
 }
 
+variable "project_name" {
+  description = "The name of the project to be created."
+}
+
+
 variable "credentials_file_path" {
   description = "Location of the credentials to use."
   default     = ""
@@ -37,4 +42,3 @@ variable "gcp_region" {
   default     = "us-west1"
   description = "The region in which all GCP resources will be launched."
 }
-
