@@ -4,3 +4,5 @@ backend.tf
 .terraform
 terraform.*
 .git
+*.tfvars
+*.swp
