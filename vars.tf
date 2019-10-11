@@ -1,13 +1,13 @@
 variable "location" {
-  default = "us-central"
+  default = "us-west"
 }
 
 variable "region" {
-  default = "us-central1"
+  default = "us-west1"
 }
 
 variable "region_zone" {
-  default = "us-central1-f"
+  default = "us-west1-b"
 }
 
 variable "org_id" {
@@ -20,8 +20,25 @@ variable "billing_account" {
   default     = ""
 }
 
+variable "project_name" {
+  description = "The name of the project to be created."
+}
+
 
 variable "credentials_file_path" {
   description = "Location of the credentials to use."
   default     = ""
+}
+
+variable "gcp_project_id" {
+  description = "The GCP Project ID where all resources will be launched."
+}
+
+variable "gcp_credentials" {
+  description = "The GCP credentials."
+}
+
+variable "gcp_region" {
+  default     = "us-west1"
+  description = "The region in which all GCP resources will be launched."
 }

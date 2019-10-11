@@ -1,11 +1,12 @@
-variable "project_id" { default = "" }
-variable "zone" { default = "" }
+resource "random_pet" "petservername" {
+}
 
 resource "google_compute_instance" "gce" {
-  name         = "test"
+  # create a fun name for your pet server
+  name         = "${random_pet.petservername.id}"
   machine_type = "n1-standard-1"
-  zone         = "${var.zone}"
-  project      = "${var.project_id}"
+  zone         = var.zone
+  project      = var.project_id
 
   boot_disk {
     initialize_params {
@@ -20,8 +21,6 @@ resource "google_compute_instance" "gce" {
 
     access_config { }
   }
-
-  metadata { foo = "bar" }
 
   metadata_startup_script = "echo hi > /test.txt"
 
