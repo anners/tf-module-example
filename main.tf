@@ -10,7 +10,7 @@ module "project" {
   # source    = "github.com/stoffee/tf-module-example//modules/project"
   org_id          = var.org_id
   billing_account = var.billing_account
-  project_name    = "testing"
+  project_name    = "cd-testing"
 }
 
 module "vm" {
@@ -20,4 +20,3 @@ module "vm" {
   zone       = var.region_zone
   project_id = module.project.project_id
 }
-
