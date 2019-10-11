@@ -20,7 +20,6 @@ variable "billing_account" {
   default     = ""
 }
 
-
 variable "credentials_file_path" {
   description = "Location of the credentials to use."
   default     = ""
@@ -35,6 +34,7 @@ variable "gcp_credentials" {
 }
 
 variable "gcp_region" {
-  default = "us-west1"
+  default     = "us-west1"
   description = "The region in which all GCP resources will be launched."
 }
+
